@@ -3,9 +3,76 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Designer to Builder</title>
+    <meta name="color-scheme" content="light dark">
+    <title>Design token check</title>
+    <link rel="stylesheet" href="src/tokens/tokens.css">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--typography-body-font-family);
+      }
+
+      main {
+        max-width: 720px;
+        margin: 48px auto;
+        padding: 0 16px;
+      }
+
+      .themes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      section {
+        padding: 24px;
+        background: var(--background-page);
+        color: var(--foreground-default-primary);
+        border: var(--border-width) solid var(--border-base);
+        border-radius: var(--radius-base);
+      }
+
+      .sample {
+        margin-top: 16px;
+        padding: var(--padding-loose);
+        background: var(--component-accordion-background-active);
+        color: var(--component-accordion-foreground-active);
+        border: var(--border-width) solid
+          var(--component-accordion-border-active);
+        border-radius: var(--radius-base);
+      }
+
+      h1,
+      h2,
+      p {
+        margin: 0;
+      }
+
+      @media (max-width: 560px) {
+        .themes {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
-    <main id="preview"></main>
+    <main>
+      <h1>Design tokens are working</h1>
+      <div class="themes">
+        <section data-theme="light">
+          <h2>Light</h2>
+          <p class="sample">Active accordion tokens</p>
+        </section>
+        <section data-theme="dark">
+          <h2>Dark</h2>
+          <p class="sample">Active accordion tokens</p>
+        </section>
+      </div>
+    </main>
   </body>
 </html>

@@ -1,0 +1,187 @@
+/*
+ * Design tokens from the Designer to Builder Figma file.
+ * Primitives hold raw values. Semantic and component tokens alias primitives.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* Primitive colours */
+  --white-white-10: #ffffff1a;
+  --white-white-25: #ffffff40;
+  --white-white-40: #ffffff66;
+  --white-white-50: #ffffff80;
+  --white-white-60: #ffffff99;
+  --white-white-70: #ffffffb2;
+  --white-white-85: #ffffffd9;
+  --white-white: #ffffff;
+
+  --black-black-10: #0000001a;
+  --black-black-25: #00000040;
+  --black-black-40: #00000066;
+  --black-black-50: #00000080;
+  --black-black-60: #00000099;
+  --black-black-70: #000000b2;
+  --black-white-85: #ffffffd9;
+  --black-white: #ffffff;
+
+  --grey-100: #efefef;
+  --grey-200: #cfcfcf;
+  --grey-300: #a8a8a8;
+  --grey-400: #949494;
+  --grey-500: #767272;
+  --grey-600: #4e4e4e;
+  --grey-700: #2a2a2a;
+  --grey-800: #141414;
+
+  --brand-100: #eff3f6;
+  --brand-200: #c2cbd3;
+  --brand-300: #8eadc9;
+  --brand-400: #6492bb;
+  --brand-500: #2e7bbe;
+  --brand-600: #245783;
+  --brand-700: #082032;
+  --brand-800: #051828;
+
+  --orange-100: #f6f2ef;
+  --orange-200: #d5ccc5;
+  --orange-300: #caac83;
+  --orange-400: #b38549;
+  --orange-500: #a46718;
+  --orange-600: #a46514;
+  --orange-700: #37260f;
+  --orange-800: #1f1202;
+
+  --red-100: #f6f0ef;
+  --red-200: #d8c9c7;
+  --red-300: #cb928d;
+  --red-400: #cf776f;
+  --red-500: #c5473b;
+  --red-600: #9a3229;
+  --red-700: #39100c;
+  --red-800: #270705;
+
+  --green-100: #eff6f0;
+  --green-200: #c5d6c8;
+  --green-300: #83b28b;
+  --green-400: #4f9e5c;
+  --green-500: #238433;
+  --green-600: #257232;
+  --green-700: #0b3012;
+  --green-800: #07240c;
+
+  /* Typography */
+  --typography-heading-large-font-family: "Google Sans Flex", sans-serif;
+  --typography-heading-large-font-weight: 500;
+  --typography-heading-large-font-size: 24px;
+  --typography-heading-large-line-height: 26.4px;
+  --typography-heading-large-letter-spacing: -0.25px;
+  --typography-heading-font-family: "Google Sans Flex", sans-serif;
+  --typography-heading-font-weight: 500;
+  --typography-heading-font-size: 20px;
+  --typography-heading-line-height: 22px;
+  --typography-heading-letter-spacing: -0.25px;
+  --typography-body-font-family: "Google Sans Flex", sans-serif;
+  --typography-body-font-weight: 400;
+  --typography-body-font-size: 16px;
+  --typography-body-line-height: 20.8px;
+  --typography-body-letter-spacing: 0px;
+  --typography-body-strong-font-family: "Google Sans Flex", sans-serif;
+  --typography-body-strong-font-weight: 500;
+  --typography-body-strong-font-size: 16px;
+  --typography-body-strong-line-height: 20.8px;
+  --typography-body-strong-letter-spacing: 0px;
+  --typography-body-small-font-family: "Google Sans Flex", sans-serif;
+  --typography-body-small-font-weight: 400;
+  --typography-body-small-font-size: 12px;
+  --typography-body-small-line-height: 15.6px;
+  --typography-body-small-letter-spacing: 0px;
+  --typography-body-small-strong-font-family: "Google Sans Flex", sans-serif;
+  --typography-body-small-strong-font-weight: 500;
+  --typography-body-small-strong-font-size: 12px;
+  --typography-body-small-strong-line-height: 15.6px;
+  --typography-body-small-strong-letter-spacing: 0px;
+
+  /* Shared dimensions */
+  --border-width: 0.5px;
+  --radius-base: 8px;
+  --padding-base: 8px;
+  --padding-loose: 12px;
+  --shadow-lift-color: var(--black-black-10);
+  --shadow-lift-x: 0px;
+  --shadow-lift-y: 2px;
+  --shadow-lift-blur: 4px;
+  --shadow-lift-spread: 0px;
+}
+
+/* Light is the default theme. */
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+  --background-page: var(--white-white);
+  --background-base: var(--white-white);
+  --background-brand-subtle: var(--brand-100);
+  --background-brand-muted: var(--brand-200);
+  --background-brand-strong: var(--brand-300);
+  --background-brand-pop: var(--brand-500);
+  --background-positive-subtle: var(--green-100);
+  --background-positive-muted: var(--green-200);
+  --background-positive-strong: var(--green-300);
+  --background-positive-pop: var(--green-500);
+  --background-negative-subtle: var(--red-100);
+  --background-negative-muted: var(--red-200);
+  --background-negative-strong: var(--red-300);
+  --background-negative-pop: var(--red-500);
+  --background-warning-subtle: var(--orange-100);
+  --background-warning-muted: var(--orange-200);
+  --background-warning-strong: var(--orange-300);
+  --background-warning-pop: var(--orange-500);
+  --border-base: var(--grey-400);
+  --border-brand: var(--brand-400);
+  --foreground-default-primary: var(--grey-800);
+  --foreground-default-secondary: var(--grey-700);
+  --foreground-brand-primary: var(--brand-800);
+  --foreground-brand-secondary: var(--brand-700);
+  --component-accordion-background: var(--white-white);
+  --component-accordion-background-active: var(--brand-100);
+  --component-accordion-background-section: var(--brand-100);
+  --component-accordion-foreground: var(--brand-800);
+  --component-accordion-foreground-active: var(--brand-800);
+  --component-accordion-border: var(--grey-400);
+  --component-accordion-border-active: var(--brand-400);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --background-page: var(--grey-800);
+  --background-base: var(--grey-700);
+  --background-brand-subtle: var(--brand-800);
+  --background-brand-muted: var(--brand-700);
+  --background-brand-strong: var(--brand-600);
+  --background-brand-pop: var(--brand-500);
+  --background-positive-subtle: var(--green-800);
+  --background-positive-muted: var(--green-700);
+  --background-positive-strong: var(--green-600);
+  --background-positive-pop: var(--green-500);
+  --background-negative-subtle: var(--red-800);
+  --background-negative-muted: var(--red-700);
+  --background-negative-strong: var(--red-600);
+  --background-negative-pop: var(--red-500);
+  --background-warning-subtle: var(--orange-800);
+  --background-warning-muted: var(--orange-700);
+  --background-warning-strong: var(--orange-600);
+  --background-warning-pop: var(--orange-500);
+  --border-base: var(--grey-600);
+  --border-brand: var(--brand-600);
+  --foreground-default-primary: var(--grey-100);
+  --foreground-default-secondary: var(--grey-200);
+  --foreground-brand-primary: var(--brand-100);
+  --foreground-brand-secondary: var(--brand-200);
+  --component-accordion-background: var(--grey-700);
+  --component-accordion-background-active: var(--brand-200);
+  --component-accordion-background-section: var(--grey-700);
+  --component-accordion-foreground: var(--grey-100);
+  --component-accordion-foreground-active: var(--brand-800);
+  --component-accordion-border: var(--brand-400);
+  --component-accordion-border-active: var(--brand-300);
+}
