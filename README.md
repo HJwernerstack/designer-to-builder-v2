@@ -6,7 +6,7 @@ The project intentionally starts small. It uses native HTML and CSS, with no fra
 
 ## Design source
 
-The project uses the Accordion component from the [Designer to Builder Figma file](https://www.figma.com/design/JOGosTfupXEfUbaMeWTSKW/Figma-livestream--Designer--%3E-Builder--Community-?node-id=0-1).
+The project uses the Accordion component from the [Designer to Builder Figma Community file](https://www.figma.com/community/file/1655994171720567013/figma-livestream-designer-builder).
 
 The Figma file contains the component structure, open and closed states, content, variables, and light and dark examples used as the source of truth for the implementation.
 
