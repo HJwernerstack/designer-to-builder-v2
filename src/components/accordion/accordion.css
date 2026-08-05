@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background-page);
+  color: var(--foreground-default-primary);
+  font-family: var(--typography-body-font-family);
+}
+
+main {
+  max-width: 1056px;
+  margin: 48px auto;
+  padding: 0 16px;
+}
+
+.themes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+section {
+  padding: 24px;
+  background: var(--background-page);
+  color: var(--foreground-default-primary);
+  border: var(--border-width) solid var(--border-base);
+  border-radius: var(--radius-base);
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 16px;
+  font-family: var(--typography-heading-font-family);
+  font-size: var(--typography-heading-font-size);
+  font-weight: var(--typography-heading-font-weight);
+  line-height: var(--typography-heading-line-height);
+  letter-spacing: var(--typography-heading-letter-spacing);
+}
+
+.accordion {
+  display: grid;
+  width: min(480px, 100%);
+  gap: var(--padding-base);
+}
+
+.accordion details {
+  overflow: hidden;
+  background: var(--component-accordion-background);
+  border: var(--border-width) solid var(--component-accordion-border);
+  border-radius: var(--radius-base);
+  box-shadow: var(--shadow-lift-x) var(--shadow-lift-y) var(--shadow-lift-blur)
+    var(--shadow-lift-spread) var(--shadow-lift-color);
+}
+
+.accordion details[open] {
+  border-color: var(--component-accordion-border-active);
+}
+
+.accordion summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: var(--padding-base) var(--padding-loose) var(--padding-base)
+    var(--padding-base);
+  color: var(--component-accordion-foreground);
+  font-family: var(--typography-body-strong-font-family);
+  font-size: var(--typography-body-strong-font-size);
+  font-weight: var(--typography-body-strong-font-weight);
+  line-height: var(--typography-heading-line-height);
+  letter-spacing: var(--typography-body-strong-letter-spacing);
+  cursor: pointer;
+  list-style: none;
+}
+
+.accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion summary::before {
+  width: 8px;
+  height: 8px;
+  border-top: var(--border-width) solid currentColor;
+  border-right: var(--border-width) solid currentColor;
+  content: "";
+  flex: 0 0 8px;
+  margin: 0 4px;
+  transform: rotate(135deg);
+}
+
+.accordion details[open] summary {
+  background: var(--component-accordion-background-active);
+  color: var(--component-accordion-foreground-active);
+  border-bottom: var(--border-width) solid var(--component-accordion-border-active);
+}
+
+.accordion details[open] summary::before {
+  transform: rotate(-45deg);
+}
+
+.accordion summary:focus-visible {
+  outline: 2px solid var(--border-brand);
+  outline-offset: -2px;
+}
+
+.accordion__body {
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr);
+  gap: 6px;
+  padding: var(--padding-loose) var(--padding-loose) var(--padding-loose)
+    var(--padding-base);
+}
+
+.accordion__body::before {
+  width: 16px;
+  height: 16px;
+  content: "";
+}
+
+.accordion__body p {
+  color: var(--foreground-default-secondary);
+  font-family: var(--typography-body-font-family);
+  font-size: var(--typography-body-font-size);
+  font-weight: var(--typography-body-font-weight);
+  line-height: var(--typography-body-line-height);
+  letter-spacing: var(--typography-body-letter-spacing);
+}
+
+@media (max-width: 720px) {
+  .themes {
+    grid-template-columns: 1fr;
+  }
+}
