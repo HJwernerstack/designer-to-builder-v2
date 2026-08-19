@@ -1,0 +1,13 @@
+{
+  "name": "designer-to-builder",
+  "private": true,
+  "scripts": {
+    "code-connect:create": "npx --yes --package @figma/code-connect figma connect create",
+    "code-connect:check": "npx --yes --package @figma/code-connect figma connect parse --dry-run",
+    "code-connect:publish": "npx --yes --package @figma/code-connect figma connect publish",
+    "code-connect:unpublish": "npx --yes --package @figma/code-connect figma connect unpublish"
+  },
+  "devDependencies": {
+    "@figma/code-connect": "^2.0.0"
+  }
+}

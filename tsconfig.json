@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "types": ["@figma/code-connect/figma-types"]
+  },
+  "include": ["src/**/*.figma.ts"]
+}

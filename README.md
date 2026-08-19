@@ -34,3 +34,23 @@ The component and token directories are empty in the starting scaffold. The blan
 ## View locally
 
 Clone the repository and open `index.html` in a browser. No installation or build command is required.
+
+## Connect the accordion to Figma
+
+This repository is configured for the framework-agnostic Code Connect template format. The generated snippets are labeled **HTML** in Figma and live next to the component they document.
+
+1. In your copy of the Figma library, right-click the root Accordion component and choose **Copy link to selection**.
+2. Generate a template beside the component:
+
+   ```sh
+   npm run code-connect:create -- "<FIGMA_COMPONENT_URL>" --outDir src/components/accordion
+   ```
+
+3. Update the generated `.figma.ts` file so its `example` contains the semantic `<details>` and `<summary>` markup from `src/components/accordion/accordion.html`. Keep its `// url=...` comment pointed at the root Figma component.
+4. Create a Figma personal access token with **Code Connect: Write** and **File content: Read** scopes, then publish without putting the token in the repository:
+
+   ```sh
+   FIGMA_ACCESS_TOKEN="<YOUR_TOKEN>" npm run code-connect:publish
+   ```
+
+Use `npm run code-connect:check` to parse the templates locally before publishing. The command downloads the official Code Connect CLI on demand, so no dependency or build step is added to the component preview.
